@@ -1,3 +1,4 @@
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,6 +42,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Custom Styles */
 body {
     font-family: Arial, sans-serif;
 }
@@ -55,9 +58,6 @@ body {
 .slider {
     position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }
 
 .slides {
@@ -70,16 +70,24 @@ body {
     box-sizing: border-box;
     height: 500px;
 }
+
 img {
     height: 100%; 
     width: 100%;
     object-fit: contain;
 }
+
+.nav-and-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
 .navigation {
-    position: relative;
     display: flex;
     justify-content: center;
-    width: 100%;
+    gap: 10px;
 }
 
 .nav-btn {
@@ -88,7 +96,6 @@ img {
     border-radius: 50%;
     cursor: pointer;
     height: 20px;
-    margin: 0 5px;
     outline: none;
     width: 20px;
     transition: background-color 0.3s;
@@ -114,20 +121,23 @@ input[type="radio"] {
     transform: translateX(-200%);
 }
 
-#slide1:checked ~ .navigation label[for="slide1"],
-#slide2:checked ~ .navigation label[for="slide2"],
-#slide3:checked ~ .navigation label[for="slide3"] {
+#slide1:checked ~ .nav-and-desc .navigation label[for="slide1"],
+#slide2:checked ~ .nav-and-desc .navigation label[for="slide2"],
+#slide3:checked ~ .nav-and-desc .navigation label[for="slide3"] {
     background-color: #333;
 }
 
 .description {
     text-align: center;
     color: #333;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
 }
 
-#slide1:checked ~ .description .desc1,
-#slide2:checked ~ .description .desc2,
-#slide3:checked ~ .description .desc3 {
+#slide1:checked ~ .nav-and-desc .desc1,
+#slide2:checked ~ .nav-and-desc .desc2,
+#slide3:checked ~ .nav-and-desc .desc3 {
     display: block;
 }
 
