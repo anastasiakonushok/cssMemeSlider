@@ -7,59 +7,36 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="slider">
-            <div class="imgs_slides">
-                <!-- Radio buttons start -->
-                
-                <input type="radio" name="radio-btn" id="radio1" />
+        <div class="slider-container">
+            <div class="slider">
+                <input type="radio" name="slider" id="slide1" checked />
+                <input type="radio" name="slider" id="slide2" />
+                <input type="radio" name="slider" id="slide3" />
 
-                <input type="radio" name="radio-btn" id="radio2" />
+                <div class="slides">
+                    <div class="slide">
+                        <img src="image1.jpg" alt="Image 1" />
+                    </div>
+                    <div class="slide">
+                        <img src="image2.jpg" alt="Image 2" />
+                    </div>
+                    <div class="slide">
+                        <img src="image3.jpg" alt="Image 3" />
+                    </div>
+                </div>
 
-                <input type="radio" name="radio-btn" id="radio3" />
+                <div class="navigation">
+                    <label for="slide1" class="nav-btn"></label>
+                    <label for="slide2" class="nav-btn"></label>
+                    <label for="slide3" class="nav-btn"></label>
+                </div>
 
-                <input type="radio" name="radio-btn" id="radio4" />
-
-                <input type="radio" name="radio-btn" id="radio5" />
-
-                <!-- Radio buttons end -->
-                <!-- Embedding  images start -->
-                <div class="first slide">
-                    <img
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20210105130612/img1.PNG"
-                    />
+                <div class="description">
+                    <div class="desc desc1">Описание для изображения 1</div>
+                    <div class="desc desc2">Описание для изображения 2</div>
+                    <div class="desc desc3">Описание для изображения 3</div>
                 </div>
-                <div class="slide">
-                    <img
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20210105130614/img2.PNG"
-                    />
-                </div>
-                <div class="slide">
-                    <img
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20210105130615/img3.PNG"
-                    />
-                </div>
-                <div class="slide">
-                    <img
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20210105130616/img4.PNG"
-                    />
-                </div>
-                <div class="slide">
-                    <img
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20210105130617/img5.PNG"
-                    />
-                </div>
-                <!-- Embedding images end -->
             </div>
-
-            <!-- Navigation start -->
-            <div class="navigation">
-                <label for="radio1" class="navigation-btn"> </label>
-                <label for="radio2" class="navigation-btn"> </label>
-                <label for="radio3" class="navigation-btn"> </label>
-                <label for="radio4" class="navigation-btn"> </label>
-                <label for="radio5" class="navigation-btn"> </label>
-            </div>
-            <!-- Navigation end -->
-        </div>  
+        </div>
     </body>
 </html>
