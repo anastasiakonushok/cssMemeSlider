@@ -55,6 +55,9 @@ body {
 .slider {
     position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .slides {
@@ -73,10 +76,7 @@ img {
     object-fit: contain;
 }
 .navigation {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -121,7 +121,6 @@ input[type="radio"] {
 }
 
 .description {
-    margin-top: 20px;
     text-align: center;
     color: #333;
 }
